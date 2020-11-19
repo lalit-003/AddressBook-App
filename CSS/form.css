@@ -1,0 +1,177 @@
+/*UC 1*/
+body{
+    margin:0;
+    height: 100%;
+}
+
+.header{
+    padding: 15px 0;
+    background-color: white;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border:0px solid green;
+}
+
+.logo-content
+{
+    display: flex;
+    flex-direction: row;
+    width:80%;
+    align-items: center;
+    border:0px solid green; 
+}
+
+.logo-content-img{
+    border : solid 10px #0d0e0f;
+    height : 10%;
+}
+
+.addbook-text{
+    font: normal normal bold 15px/25px Montserrat;
+    font-family: "Montserrat",sans-serif;
+    letter-spacing: 0px;
+    color: blue;
+    text-transform: capitalize;
+    flex-direction: row;
+}
+.address-book{
+    color: #42515f;
+    padding: 0px;
+    margin : 0px;
+    flex-direction: row;
+}
+
+*{box-sizing: border-box;}
+
+/* UC 2*/
+.form-content {
+    padding-top: 40px;
+    min-height:calc(100% -80px);
+    background-color:#f7f7f7;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid green;
+    } 
+
+    .form {
+        width: 70%;
+        background:white 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 8px;
+        opacity: 1;
+    }
+
+    .form-head {
+        font: normal normal bold 24px/37px Roboto;
+        letter-spacing: 0px;
+        color: white;
+        background-color: blue;
+        text-align: center;
+        text-transform: capitalize;
+        opacity: 1;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .row-content {
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        align-items: left;
+        border: 0px solid green;
+        padding-top: 40px;
+    }
+
+    .label {
+        min-width: 140px;
+        
+    }
+
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        border: 1px #0d0e0f;
+    }
+
+    .text {
+        font-size: 16px;
+        color: #42515f;
+        opacity: 1;
+        font-family: Roboto;
+    }
+
+.input {
+    width: 100%;
+    padding:20px;
+    border:1px solid black;
+    border-radius: 4px;
+    resize:vertical;
+}
+
+.phone-content {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: left;
+    border: 0px solid green;
+    padding-top: 00px;
+}
+
+.phone {
+    width: 100%;
+    padding:20px;
+    border:1px solid black;
+    border-radius: 4px;
+    resize:vertical;
+}
+
+.address {
+    width: 100%;
+    line-height: 500%;
+    padding:20px;
+    border:1px solid black;
+    border-radius: 4px;
+    resize:vertical;
+}
+
+select{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font: normal normal normal 16px Roboto;
+    letter-spacing: 0px;
+    color: #42525f;
+    background-color: transparent;
+    
+} 
+
+.address-content {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: left;
+    border: 0px solid green;
+    padding-top: 00px;
+}
+
+.row-citystate {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: left;
+    border: 0px solid green;
+    padding-top: 00px;
+}
