@@ -90,22 +90,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
         localStorage.setItem("ContactList",JSON.stringify(contactList));
     }
     
-    const getSelectedValues=(propertyValue)=>{
-        let allItems = document.querySelectorAll(propertyValue)
-        let selItems = [] ;
-        allItems.forEach(item=>{
-            if(item.checked)
-            selItems.push(item.value);
-        })
-        return selItems;
-    }
     
-    const getInputValueById = (id) => {
-        let value = document.querySelector(id).value;
-        return value;
-    }
-
-    const getInputElementValue = (id) => {
-        let value = document.getElementById(id).value
-        return value
-    }  
