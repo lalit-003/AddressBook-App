@@ -1,17 +1,25 @@
+let contactList ;
 window.addEventListener("DOMContentLoaded", (event) => {
+    contactList = getContactDetailsFromSotage();
+    console.log(contactList);
     createInnerHtml();
 });
+
+const getContactDetailsFromSotage = () =>{
+    return localStorage.getItem("ContactList") ?
+        JSON.parse(localStorage.getItem("ContactList")) : [];
+}
 
 //Template literal ES6 feature
 const createInnerHtml = () => {
     const headerHtml =
         "<tr><th>Fullname</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>PhoneNumber</th><th>Actions</th></tr>";
-  let contactList = createContactDetailsJSON();
+ // let contactList = createContactDetailsJSON();
   let innerHtml = `${headerHtml}`;
   for(const contact of contactList){
      innerHtml = `${innerHtml}
      <tr>
-             <td>${contact._name}</td>
+           <td>${contact._name}</td>
              <td>${contact._address}</td>
              <td>${contact._city}</td>
              <td>${contact._state}</td>
