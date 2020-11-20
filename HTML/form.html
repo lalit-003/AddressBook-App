@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap"> 
      <link rel="stylesheet" type="text/css" href="../CSS/form.css">
+     <script defer src="../JS/AddressBook.js"></script>
+     <script defer src="../JS/form.js"></script>
     <title>AddressBook form</title>
     <style type="text/css"></style>
 </head>
@@ -20,33 +22,36 @@
   </header>
 
   <div class="form-content">
-    <form class="form" action="#" onsubmit="save();return false">
+    <form class="form" action="#"  onreset="resetForm()" onsubmit="save();return false">
   <div class ="form-head">
       PERSON ADDRESS FORM
   </div>
   
   <div class = "row-content">
-      <label class="label text" for="name"> Full Name</label>
+      <label class="label text" for="name">Full Name</label>
   <input class="input" type="text" id="name" name="name"
           required> 
+          <error-output class="text-error" for="text"></error-output>
   </div>
 
   <div class = "phone-content">
     <label class="label text" for="phone">Phone Number</label>
-    <input class="phone" type="text" id="phone" name="phone"
+    <input class="input" type="text" id="phone" name="phone"
         required> 
+        <error-output class="phone-error" for="text"></error-output>
 </div>
 
 <div class = "phone-content">
   <label class="label text" for="address">Address</label>
-  <input class="address" type="text" id="address" name="address"
+  <input class="input" type="text" id="address" name="address"
       required> 
+      <error-output class="address-error" for="text"></error-output>
 </div>
 
 <div class="address-content">
   <div class = "row-citystate">
   <label class="label text" >
-  <label for="city">City</label>
+  <div for="city">City</div>
       <select id="city" name="city" >
         <option value="Select City" disabled selected>Select City</option>
           <option value="Ambala">Ambala</option>
@@ -74,7 +79,7 @@
       </div>
       <div class = "row-citystate">
       <label class="label text">
-        <label for="state">State</label>
+        <div for="state">State</div>
         <select id="state" name="state">
         <option value="Select State" disabled selected>Select State</option>
         <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -112,6 +117,13 @@
       </label>
     </div>
   </div>
+
+  <div class="buttonParent">
+    <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
+    <div class="submit-reset">
+        <button type="submit" class="submitButton button" id="submitButton">Add</button>
+        <button type="reset" class="resetButton button">Reset</button>
+    </div>
   </form>
 </div>  
 </body>
