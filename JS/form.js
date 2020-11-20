@@ -101,5 +101,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     const cancel = () => {
-        resetForm();
+            window.location.replace('../HTML/HomePage.html');
     }
