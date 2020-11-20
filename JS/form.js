@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     return;
                 }
                 try {
-                    (new AddressBook())._phoneNumber = phone.value;
+                    (new AddressBook()).phoneNumber = phone.value;
                     phoneError.textContent = "";
                 } catch (e) {
                     phoneError.textContent = e;
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                         return;
                     }
                     try {
-                        (new AddressBook())._address = address.value;
+                        (new AddressBook()).address = address.value;
                         addressError.textContent = "";
                     } catch (e) {
                         addressError.textContent = e;
@@ -52,6 +52,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         try{
             let addressBookData = createAddressBook();
             createAndUpdateStorage(addressBookData);
+            resetForm();
         }catch(e){
             return;
         }
@@ -90,4 +91,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
         localStorage.setItem("ContactList",JSON.stringify(contactList));
     }
     
-    
+    const resetForm = ()=>{
+    document.querySelector("#name").value = "";
+    document.querySelector('#phone').value = "";
+    document.querySelector('#address').value= "";
+    document.querySelector('#city').value = "Select City";
+    document.querySelector('#state').value= "Select State";
+    document.querySelector('#zip').value= "";
+    }
+
+    const cancel = () => {
+        resetForm();
+    }

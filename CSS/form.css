@@ -106,7 +106,17 @@ body{
         opacity: 1;
         font-family: Roboto;
     }
+    .head{
+       
+        flex: display;
+        flex : row;
+    }
 
+    .cross{
+        align-items: right;
+        margin-right: 50px;;     
+    }
+    
 .input {
     width: 100%;
     padding:20px;
@@ -136,7 +146,7 @@ body{
 
 .address {
     width: 100%;
-    line-height: 500%;
+    line-height: 700%;
     padding:20px;
     border:1px solid black;
     border-radius: 4px;
@@ -179,12 +189,23 @@ select{
     
 }
 
+.input1 {
+    width: 100%;
+    padding:13px;
+    border:1px solid black;
+    resize:vertical;
+    line-height:80%;
+    margin-block-start: -100px;
+}
+
 
 .buttonParent{
     display: flex;
     margin-bottom: 10px;
     justify-content: space-between;
     margin-top: 20px;
+    padding-left: 450px;
+    align-items: right;
 }
 
 .button{
@@ -201,7 +222,7 @@ select{
     border: 1px solid#707070;
     cursor: pointer;
     margin-left: 100px;
-    margin-right: 100px;
+    margin-right: 10px;
 }
 
 .submitButton,.resetButton{
@@ -241,8 +262,6 @@ error-output{
     color: red;
 }
 
-
-
 @media only screen and (max-width: 960px){
     .cancelButton{
         margin-left: 0px;
@@ -267,7 +286,6 @@ error-output{
         border: 0px solid green;
         padding-top: 00px;
     }
-    
 }
 
 @media only screen and (max-width: 550px){
@@ -310,6 +328,5 @@ error-output{
         cursor: pointer;
         margin-left: 10px;
         margin-right: 10px;
-    
     }
 }
