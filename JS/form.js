@@ -70,6 +70,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             throw e;
         }
         console.log(document.querySelector('#name').value);
+        addressBookData._id = new Date().getTime();
         addressBookData._phoneNumber=document.querySelector('#phone').value;
         console.log("added phone");
         addressBookData._address=document.querySelector('#address').value;
@@ -103,3 +104,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const cancel = () => {
             window.location.replace('../HTML/HomePage.html');
     }
+
+    

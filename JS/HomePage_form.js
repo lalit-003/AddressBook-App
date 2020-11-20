@@ -1,4 +1,5 @@
 let contactList ;
+
 window.addEventListener("DOMContentLoaded", (event) => {
     contactList = getContactDetailsFromSotage();
     console.log(contactList);
@@ -31,8 +32,8 @@ const createInnerHtml = () => {
              </td>
          </tr>
      `;
-     document.querySelector('#table-display').innerHTML = innerHtml;
 }
+document.querySelector('#table-display').innerHTML = innerHtml;
 }
 
 
@@ -68,3 +69,20 @@ const createContactDetailsJSON = () => {
  ]
  return contactListLocal;
 } 
+
+const addPerson = () => {
+    window.location.replace('../HTML/form.html');
+}
+
+
+const remove = (node) => {
+    let contact = contactList.find(contact => contact._id == node.id);
+    console.log("contact to be deleted : "+contact);
+    if(!contact) return;
+    const index = contactList.map(contact => contact._id).indexOf(contact._id);
+    contactList.splice(index,1);
+    localStorage.setItem('ContactList',JSON.stringify(contactList));
+    createInnerHtml();
+} 
+
+
