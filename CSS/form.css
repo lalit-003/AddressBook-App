@@ -286,6 +286,15 @@ error-output{
         border: 0px solid green;
         padding-top: 00px;
     }
+
+    .buttonParent{
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-left: 250px;
+        align-items: right;
+    }
 }
 
 @media only screen and (max-width: 550px){
@@ -328,5 +337,14 @@ error-output{
         cursor: pointer;
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    .buttonParent{
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-left: 50px;
+        align-items: right;
     }
 }
